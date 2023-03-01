@@ -1,17 +1,10 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 3364:
+/***/ 3663:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-module.exports = require(__nccwpck_require__.ab + "snappy.linux-x64-gnu.node")
-
-/***/ }),
-
-/***/ 9524:
-/***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
-
-module.exports = require(__nccwpck_require__.ab + "snappy.linux-x64-musl.node")
+module.exports = require(__nccwpck_require__.ab + "snappy.darwin-x64.node")
 
 /***/ }),
 
@@ -15949,7 +15942,7 @@ module.exports = function isArrayish(obj) {
 /***/ 315:
 /***/ ((module, __unused_webpack_exports, __nccwpck_require__) => {
 
-const{existsSync,readFileSync}=__nccwpck_require__(5747),{join}=__nccwpck_require__(5622),{platform,arch}=process;let nativeBinding=null,localFileExisted=!1,isMusl=!1,loadError=null;switch(platform){case"android":if(arch!=="arm64")throw new Error(`Unsupported architecture on Android ${arch}`);localFileExisted=existsSync(join(__dirname,"snappy.android-arm64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(1607):nativeBinding=__nccwpck_require__(8935)}catch(e){loadError=e}break;case"win32":switch(arch){case"x64":localFileExisted=existsSync(join(__dirname,"snappy.win32-x64-msvc.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(5102):nativeBinding=__nccwpck_require__(9679)}catch(e){loadError=e}break;case"ia32":localFileExisted=existsSync(join(__dirname,"snappy.win32-ia32-msvc.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(3199):nativeBinding=__nccwpck_require__(9965)}catch(e){loadError=e}break;case"arm64":localFileExisted=existsSync(join(__dirname,"snappy.win32-arm64-msvc.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(4403):nativeBinding=__nccwpck_require__(8897)}catch(e){loadError=e}break;default:throw new Error(`Unsupported architecture on Windows: ${arch}`)}break;case"darwin":switch(arch){case"x64":localFileExisted=existsSync(join(__dirname,"snappy.darwin-x64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(8220):nativeBinding=__nccwpck_require__(2511)}catch(e){loadError=e}break;case"arm64":localFileExisted=existsSync(join(__dirname,"snappy.darwin-arm64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(6262):nativeBinding=__nccwpck_require__(7850)}catch(e){loadError=e}break;default:throw new Error(`Unsupported architecture on macOS: ${arch}`)}break;case"freebsd":if(arch!=="x64")throw new Error(`Unsupported architecture on FreeBSD: ${arch}`);localFileExisted=existsSync(join(__dirname,"snappy.freebsd-x64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(6366):nativeBinding=__nccwpck_require__(7798)}catch(e){loadError=e}break;case"linux":switch(arch){case"x64":if(isMusl=readFileSync("/usr/bin/ldd","utf8").includes("musl"),isMusl){localFileExisted=existsSync(join(__dirname,"snappy.linux-x64-musl.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(5095):nativeBinding=__nccwpck_require__(9524)}catch(e){loadError=e}}else{localFileExisted=existsSync(join(__dirname,"snappy.linux-x64-gnu.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(1110):nativeBinding=__nccwpck_require__(3364)}catch(e){loadError=e}}break;case"arm64":if(isMusl=readFileSync("/usr/bin/ldd","utf8").includes("musl"),isMusl){localFileExisted=existsSync(join(__dirname,"snappy.linux-arm64-musl.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(1026):nativeBinding=__nccwpck_require__(7925)}catch(e){loadError=e}}else{localFileExisted=existsSync(join(__dirname,"snappy.linux-arm64-gnu.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(5972):nativeBinding=__nccwpck_require__(5305)}catch(e){loadError=e}}break;case"arm":localFileExisted=existsSync(join(__dirname,"snappy.linux-arm-gnueabihf.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(4707):nativeBinding=__nccwpck_require__(7144)}catch(e){loadError=e}break;default:throw new Error(`Unsupported architecture on Linux: ${arch}`)}break;default:throw new Error(`Unsupported OS: ${platform}, architecture: ${arch}`)}if(!nativeBinding)throw loadError||new Error("Failed to load native binding");const{compressSync,compress,uncompressSync,uncompress}=nativeBinding;module.exports.compressSync=compressSync,module.exports.compress=compress,module.exports.uncompressSync=uncompressSync,module.exports.uncompress=uncompress;
+const{existsSync,readFileSync}=__nccwpck_require__(5747),{join}=__nccwpck_require__(5622),{platform,arch}=process;let nativeBinding=null,localFileExisted=!1,isMusl=!1,loadError=null;switch(platform){case"android":if(arch!=="arm64")throw new Error(`Unsupported architecture on Android ${arch}`);localFileExisted=existsSync(join(__dirname,"snappy.android-arm64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(1607):nativeBinding=__nccwpck_require__(8935)}catch(e){loadError=e}break;case"win32":switch(arch){case"x64":localFileExisted=existsSync(join(__dirname,"snappy.win32-x64-msvc.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(5102):nativeBinding=__nccwpck_require__(9679)}catch(e){loadError=e}break;case"ia32":localFileExisted=existsSync(join(__dirname,"snappy.win32-ia32-msvc.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(3199):nativeBinding=__nccwpck_require__(9965)}catch(e){loadError=e}break;case"arm64":localFileExisted=existsSync(join(__dirname,"snappy.win32-arm64-msvc.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(4403):nativeBinding=__nccwpck_require__(8897)}catch(e){loadError=e}break;default:throw new Error(`Unsupported architecture on Windows: ${arch}`)}break;case"darwin":switch(arch){case"x64":localFileExisted=existsSync(join(__dirname,"snappy.darwin-x64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(8220):nativeBinding=__nccwpck_require__(3663)}catch(e){loadError=e}break;case"arm64":localFileExisted=existsSync(join(__dirname,"snappy.darwin-arm64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(6262):nativeBinding=__nccwpck_require__(7850)}catch(e){loadError=e}break;default:throw new Error(`Unsupported architecture on macOS: ${arch}`)}break;case"freebsd":if(arch!=="x64")throw new Error(`Unsupported architecture on FreeBSD: ${arch}`);localFileExisted=existsSync(join(__dirname,"snappy.freebsd-x64.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(6366):nativeBinding=__nccwpck_require__(7798)}catch(e){loadError=e}break;case"linux":switch(arch){case"x64":if(isMusl=readFileSync("/usr/bin/ldd","utf8").includes("musl"),isMusl){localFileExisted=existsSync(join(__dirname,"snappy.linux-x64-musl.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(5095):nativeBinding=__nccwpck_require__(3195)}catch(e){loadError=e}}else{localFileExisted=existsSync(join(__dirname,"snappy.linux-x64-gnu.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(1110):nativeBinding=__nccwpck_require__(4165)}catch(e){loadError=e}}break;case"arm64":if(isMusl=readFileSync("/usr/bin/ldd","utf8").includes("musl"),isMusl){localFileExisted=existsSync(join(__dirname,"snappy.linux-arm64-musl.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(1026):nativeBinding=__nccwpck_require__(7925)}catch(e){loadError=e}}else{localFileExisted=existsSync(join(__dirname,"snappy.linux-arm64-gnu.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(5972):nativeBinding=__nccwpck_require__(5305)}catch(e){loadError=e}}break;case"arm":localFileExisted=existsSync(join(__dirname,"snappy.linux-arm-gnueabihf.node"));try{localFileExisted?nativeBinding=__nccwpck_require__(4707):nativeBinding=__nccwpck_require__(7144)}catch(e){loadError=e}break;default:throw new Error(`Unsupported architecture on Linux: ${arch}`)}break;default:throw new Error(`Unsupported OS: ${platform}, architecture: ${arch}`)}if(!nativeBinding)throw loadError||new Error("Failed to load native binding");const{compressSync,compress,uncompressSync,uncompress}=nativeBinding;module.exports.compressSync=compressSync,module.exports.compress=compress,module.exports.uncompressSync=uncompressSync,module.exports.uncompress=uncompress;
 
 
 /***/ }),
@@ -26791,14 +26784,6 @@ module.exports = eval("require")("@napi-rs/snappy-darwin-arm64");
 
 /***/ }),
 
-/***/ 2511:
-/***/ ((module) => {
-
-module.exports = eval("require")("@napi-rs/snappy-darwin-x64");
-
-
-/***/ }),
-
 /***/ 7798:
 /***/ ((module) => {
 
@@ -26827,6 +26812,22 @@ module.exports = eval("require")("@napi-rs/snappy-linux-arm64-gnu");
 /***/ ((module) => {
 
 module.exports = eval("require")("@napi-rs/snappy-linux-arm64-musl");
+
+
+/***/ }),
+
+/***/ 4165:
+/***/ ((module) => {
+
+module.exports = eval("require")("@napi-rs/snappy-linux-x64-gnu");
+
+
+/***/ }),
+
+/***/ 3195:
+/***/ ((module) => {
+
+module.exports = eval("require")("@napi-rs/snappy-linux-x64-musl");
 
 
 /***/ }),
